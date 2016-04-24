@@ -38,8 +38,6 @@ describe('wrap() should split the text at word boundaries right before the given
         expect(wrapper.wrap(textIn, col)).to.equal(textOut);
     }); 
 });
-// input > col and there is a space somewhere before the col'th character, first character is a space
-
 
 // input > col and there is no space before the col'th character
 describe('wrap() should split the text at the given character', function() {
@@ -61,6 +59,39 @@ describe('wrap() should split the text at the given character', function() {
             + '03132333435';
         var wrapper = new Wrapper();
         expect(wrapper.wrap(textIn, 50)).to.equal(textOut);
+    });
+});
+
+describe('wrap() should split either at the last space or the column limiter when', function(){
+    it('the given text contains both lines with and without spaces', function(){
+        var textIn = 
+            'Lorem ipsum dolor sit amet, consectetur';
+        var textOut = 
+            'Lorem\n'+
+            'ipsum\n'+
+            'dolor\n'+
+            'sit\n'+
+            'amet,\n'+
+            'conse\n'+
+            'ctetu\n'+
+            'r'
+        var wrapper = new Wrapper();
+        expect(wrapper.wrap(textIn, 5)).to.equal(textOut);
+    });
+        it('the given text contains both lines with and without spaces', function(){
+        var textIn = 
+            'Lorem ipsum dolor sit amet, con s ec te tur';
+        var textOut = 
+            'Lorem\n'+
+            'ipsum\n'+
+            'dolor\n'+
+            'sit\n'+
+            'amet,\n'+
+            'con s\n'+
+            'ec te\n'+
+            'tur'
+        var wrapper = new Wrapper();
+        expect(wrapper.wrap(textIn, 5)).to.equal(textOut);
     });
 });
 //-----------------------------------------------------------------------------

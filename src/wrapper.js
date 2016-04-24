@@ -21,6 +21,7 @@ Wrapper.prototype.wrap = function(text, col) {
     if (isNaN(col) || col < 0 || !(col % 1 === 0)){
         return null;
     }
+    
     return splitByChunking(text, col).join('\n');
 };
 
