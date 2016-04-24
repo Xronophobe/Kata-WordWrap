@@ -1,0 +1,27 @@
+{
+  "name": "kata-wordwrap",
+  "version": "0.0.1",
+  "description": "Kata test task",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xronophobe/Kata-WordWrap.git"
+  },
+  "keywords": [
+    "kata",
+    "wordwrap",
+    "test"
+  ],
+  "author": "Csanad Beres",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Xronophobe/Kata-WordWrap/issues"
+  },
+  "homepage": "https://github.com/Xronophobe/Kata-WordWrap#readme"
+}
