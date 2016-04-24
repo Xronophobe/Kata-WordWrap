@@ -14,7 +14,7 @@ Like a word processor, break the line by replacing the last space in a line with
 
 * [x] Return null when the column parameter is not a positive integer
 * [x] Split at the last space character before reaching the given column
-* [x] Split at column number when there is no space before
+* [x] Split at the given column number when there is no space before
 * [ ] do not copy spaces at the first or last position of each line
 
 ## Example
@@ -27,8 +27,7 @@ var splitThis = new Wrapper().wrap('0123456789', 5);
 ``` 
 calling ``` splitThis``` will return:
 ```	
-01234
-56789
+01234\n56789
 ```
 ## License
 
